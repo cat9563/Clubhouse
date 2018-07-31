@@ -1,4 +1,13 @@
-<h1>Juicy</h1>
+<%= form_for(@post) do |f| %>
+  <br>
+  <h2>Write your Post</h2>
+  <p>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+  </p>
 
-<%= form_for(@post) do |f|
-# need to find a simple form for this part
+  <%= f.label :Juicy %><br />
+  <%= f.text_area :body, class: 'well', class: 'form-control' %>
+  <br>
+  <%= f.submit "Say it", class: 'btn btn-primary'%>
+<% end %>
